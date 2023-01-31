@@ -9,7 +9,7 @@ export class MongoDbPostRepository implements IPostRepository{
     private mongoUri;
 
     constructor(){
-        this.mongoUri = "mongodb+srv://brunoprado:993300@cluster0.ztfo5b0.mongodb.net/?retryWrites=true&w=majority"
+        this.mongoUri = ""
         //this.mongoUri = process.env.DB_URI;
     }
 
