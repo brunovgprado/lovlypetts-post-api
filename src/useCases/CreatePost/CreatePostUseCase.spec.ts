@@ -1,0 +1,1 @@
+import { InMemoryPostRepository } from "../../infrastructure/repositories/InMemoryPostRepository";

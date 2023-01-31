@@ -9,7 +9,7 @@ export class CreatePostController{
         const createPostDto = request.body as ICreatePostRequestDto
         
         try{
-            this.createPostUseCase.execute(createPostDto);
+            await this.createPostUseCase.execute(createPostDto);
             return response.status(201).send();
         }catch (err){
             //TODO: change this implementation for incapsulate this response handle logic

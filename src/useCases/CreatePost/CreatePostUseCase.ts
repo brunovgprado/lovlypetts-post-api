@@ -12,9 +12,7 @@ export class CreatePostUseCase extends BaseUseCase implements ICreatePostUseCase
 
     async execute(createPostDto: ICreatePostRequestDto): Promise<void>{
         const post = new Post(createPostDto);
-        console.log("before validation")
         this.validateEntity(post);
-        console.log("after validation")
         await this.postRepository.save(post);
     }
 }

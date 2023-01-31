@@ -1,8 +1,8 @@
-import { InMemoryPostRepository } from "../../infrastructure/repositories/InMemoryPostRepository";
+import { MongoDbPostRepository } from "../../infrastructure/repositories/MongoDbPostRepository";
 import { CreatePostController } from "./CreatePostController";
 import { CreatePostUseCase } from "./CreatePostUseCase";
 
-const postRepository = new InMemoryPostRepository();
+const postRepository = new MongoDbPostRepository();
 
 const createPostUseCase = new CreatePostUseCase(postRepository);
 
